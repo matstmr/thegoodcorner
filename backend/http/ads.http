@@ -1,0 +1,36 @@
+GET http://localhost:3001/ads?categoryId=5&search=null
+
+### SELECT one
+GET http://localhost:3001/ads/2
+
+### CREATE
+POST http://localhost:3001/ads
+Content-Type: application/json
+
+{
+  "title": "Flat to rent",
+  "price": 2000,
+  "picture": "https://images.lecho.be/view?iid=dc:113129565&context=ONLINE&ratio=16/9&width=640&u=1508242455000",
+  "categoryId": 7
+}
+
+### DELETE
+DELETE http://localhost:3000/ads/9
+
+### UPDATE
+PUT http://localhost:3000/ads/8
+Content-Type: application/json
+
+{
+  "id": 2,
+  "title": "Yellow car",
+  "description": "Yellow car to rent in Marseille",
+  "owner": "amy@gmail.com",
+  "price": 800,
+  "picture": "https://images.lecho.be/view?iid=dc:113129565&context=ONLINE&ratio=16/9&width=640&u=1508242455000",
+  "location": "Marseille"
+}
+
+
+### Categories
+GET http://localhost:3001/categories?terms=
